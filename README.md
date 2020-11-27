@@ -25,19 +25,36 @@ Here's the list of its endpoints:
 1. / , method = GET
 Base Endpoint, returning welcoming string value. 
 
-2. /data/get/<data_name> , method = GET
-Return full data <data_name> in JSON format. Currently available data are:
-    - books_c.csv
-    - pulsar_stars.csv 
+2. /Stock2018 , method = GET, static
+Return all closing price stock for Apple, Google and Facebook in full-year 2018.
+Blank data in weekend/ holiday already filled with missing value operation. 
     
-3. /data/get/equal/<data_name>/<column>/<value> , method = GET
-Return all <data_nam> where the value of column <column> is equal to <value>
+3. /customer_data, method = GET, static
+Return all total customer spending data by using groupby operation from chinook.db
+
+4. /daily_invoices, method = GET, static
+Return total number of daily invoices for respective countries by using frequencies analysis (crosstab)
+
+5. /daily_data/<name>, method = GET. dynamic
+Return daily transaction data from Monday to Sunday. Date operation was used to get day name from date data.
+example: /daily_data/Friday
+
+6. /music/<name>, method = GET, dynamic
+Return musical genre popularity in all country. Four tables were joined and categorical operation applied to get this query.
+List of genre category: 
+       'Rock', 'Jazz', 'Metal', 'Alternative & Punk', 'Rock And Roll',
+       'Blues', 'Latin', 'Reggae', 'Pop', 'Soundtrack', 'Bossa Nova',
+       'Easy Listening', 'Heavy Metal', 'R&B/Soul', 'Electronica/Dance',
+       'World', 'Hip Hop/Rap', 'TV Shows', 'Science Fiction',
+       'Sci Fi & Fantasy', 'Drama', 'Comedy', 'Alternative', 'Classical'
+example: /music/Latin
 ```
 
 If you want to try it, you can access (copy-paste it) : 
-- https://algo-capstone.herokuapp.com
-- https://algo-capstone.herokuapp.com/data/get/books_c.csv
-- https://algo-capstone.herokuapp.com/data/get/pulsar_stars.csv
-- https://algo-capstone.herokuapp.com/data/get/equal/books_c.csv/isbn/0439785960
-- https://algo-capstone.herokuapp.com/data/get/equal/books_c.csv/authors/J.K. Rowling
+- https://djogieapi.herokuapp.com
+- https://djogieapi.herokuapp.com/Stock2018
+- https://djogieapi.herokuapp.com/customer_data
+- https://djogieapi.herokuapp.com/daily_invoices
+- https://djogieapi.herokuapp.com/daily_data/Tuesday
+- https://djogieapi.herokuapp.com/music/Pop
 - and so on, just follow the endpoint's pattern
