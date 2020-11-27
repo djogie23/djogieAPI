@@ -19,7 +19,7 @@ ___
 - Implements the data analysis and wrangling behind the works
 
 ___
-We have deployed a simple example on : https://algo-capstone.herokuapp.com
+We have deployed a simple example on : https://djogieapi.herokuapp.com
 Here's the list of its endpoints: 
 ```
 1. / , method = GET
