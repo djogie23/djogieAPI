@@ -46,8 +46,8 @@ def frequencies():
     )
     return report.to_json()
 
-# Date operation - dynamic - Total Daily Spending: Monday to Sunday
-@app.route('/daily_spending/<name>', methods=['GET'])
+# Date operation - dynamic - Daily Transaction Data: Monday to Sunday
+@app.route('/daily_data/<name>', methods=['GET'])
 def dateoperation(name):
     InvoiceDOW = name
     conn = sqlite3.connect("data/chinook.db")
