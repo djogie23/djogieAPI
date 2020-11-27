@@ -37,7 +37,6 @@ requests==2.25.0
 scipy==1.5.4
 six==1.15.0
 tornado==6.1
-traitlets==5.0.5
 urllib3==1.26.2
 wcwidth==0.2.5
 Werkzeug==1.0.1
