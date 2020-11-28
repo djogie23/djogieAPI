@@ -40,6 +40,6 @@ All of these components are relatives to `maximum_score`.
 
 #### 4. Documentation (Total 3)
 **Complete at least 2 to get 3 points :**
-- [ ] Create documentation as markdown in Github 
-- [ ] Create documentation page in `<your_api_url>/docs` (may require a little HTML knowledge)
+- [x] Create documentation as markdown in Github 
+- [x] Create documentation page in `<your_api_url>/docs` (may require a little HTML knowledge)
 ___
